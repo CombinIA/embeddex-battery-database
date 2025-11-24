@@ -67,6 +67,77 @@
     }
 
     /**
+     * Car brand logo mapping and helper
+     */
+    const carBrandLogos = {
+        'BMW': 'assets/logos/cars/bmw.png',
+        'Tesla': 'assets/logos/cars/tesla.png',
+        'Toyota': 'assets/logos/cars/toyota.png',
+        'Nissan': 'assets/logos/cars/nissan.png',
+        'Hyundai': 'assets/logos/cars/hyundai.png',
+        'Mitsubishi': 'assets/logos/cars/mitsubishi.png',
+        'Peugeot': 'assets/logos/cars/peugeot.png',
+        'Citroën': 'assets/logos/cars/citroen.png',
+        'Citroen': 'assets/logos/cars/citroen.png',
+        'Renault': 'assets/logos/cars/renault.png',
+        'Volkswagen': 'assets/logos/cars/volkswagen.png',
+        'Audi': 'assets/logos/cars/audi.png',
+        'Mercedes-Benz': 'assets/logos/cars/mercedes-benz.png',
+        'Ford': 'assets/logos/cars/ford.png',
+        'Chevrolet': 'assets/logos/cars/chevrolet.png',
+        'Honda': 'assets/logos/cars/honda.png',
+        'Kia': 'assets/logos/cars/kia.png',
+        'Mazda': 'assets/logos/cars/mazda.png',
+        'Porsche': 'assets/logos/cars/porsche.png',
+        'Volvo': 'assets/logos/cars/volvo.png'
+    };
+
+    function getCarLogoHTML(brand) {
+        const logoUrl = carBrandLogos[brand];
+        const initials = brand.substring(0, 2).toUpperCase();
+
+        if (logoUrl) {
+            return `
+                <img src="${logoUrl}"
+                     alt="${brand}"
+                     class="car-logo"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="car-logo-placeholder" style="display: none;">${initials}</div>
+            `;
+        } else {
+            return `<div class="car-logo-placeholder">${initials}</div>`;
+        }
+    }
+
+    /**
+     * Cell manufacturer logo mapping and helper
+     */
+    const cellManufacturerLogos = {
+        'LG': 'assets/logos/cells/lg.png',
+        'Panasonic': 'assets/logos/cells/panasonic.png',
+        'Samsung SDI': 'assets/logos/cells/samsung.png',
+        'Toyota': 'assets/logos/cells/toyota.png',
+        'GS Yuasa': 'assets/logos/cells/gs-yuasa.png'
+    };
+
+    function getCellManufacturerLogoHTML(manufacturer) {
+        const logoUrl = cellManufacturerLogos[manufacturer];
+        const initials = manufacturer.substring(0, 2).toUpperCase();
+
+        if (logoUrl) {
+            return `
+                <img src="${logoUrl}"
+                     alt="${manufacturer}"
+                     class="car-logo"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="car-logo-placeholder" style="display: none;">${initials}</div>
+            `;
+        } else {
+            return `<div class="car-logo-placeholder">${initials}</div>`;
+        }
+    }
+
+    /**
      * Helper function to create visual stats summary HTML
      */
     function createStatsHTML(stats) {
@@ -200,6 +271,8 @@
     function setupCellModels() {
         const addBtn = document.getElementById('add-cell-btn');
         const cancelBtn = document.getElementById('cancel-cell-btn');
+        const closeBtn = document.getElementById('close-cell-modal');
+        const modal = document.getElementById('cell-modal');
         const form = document.getElementById('cell-form-element');
 
         addBtn.addEventListener('click', () => {
@@ -208,6 +281,24 @@
 
         cancelBtn.addEventListener('click', () => {
             hideCellForm();
+        });
+
+        closeBtn.addEventListener('click', () => {
+            hideCellForm();
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                hideCellForm();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                hideCellForm();
+            }
         });
 
         form.addEventListener('submit', (e) => {
@@ -229,9 +320,11 @@
         container.innerHTML = createStatsHTML(stats) + cells.map(cell => {
             const validation = validateCellModel(cell);
             const badgeHTML = createValidationBadge(validation);
+            const logoHTML = getCellManufacturerLogoHTML(cell.manufacturer);
 
             return `
-                <div class="data-item ${validation.isComplete ? '' : 'incomplete'}">
+                <div class="data-item car-item ${validation.isComplete ? '' : 'incomplete'}">
+                    ${logoHTML}
                     <div class="data-item-content">
                         <h3>${cell.manufacturer} ${cell.model} ${badgeHTML}</h3>
                         <p><strong>Chemistry:</strong> ${cell.chemistry || '<span class="missing">N/A</span>'}</p>
@@ -249,7 +342,7 @@
 
     function showCellForm(cell = null) {
         editingItem = cell;
-        const form = document.getElementById('cell-form');
+        const modal = document.getElementById('cell-modal');
         const title = document.getElementById('cell-form-title');
 
         if (cell) {
@@ -266,13 +359,15 @@
             document.getElementById('cell-id').value = '';
         }
 
-        form.classList.remove('hidden');
-        form.scrollIntoView({ behavior: 'smooth' });
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
     }
 
     function hideCellForm() {
-        document.getElementById('cell-form').classList.add('hidden');
+        const modal = document.getElementById('cell-modal');
+        modal.classList.remove('active');
         document.getElementById('cell-form-element').reset();
+        document.body.style.overflow = ''; // Restore scrolling
         editingItem = null;
     }
 
@@ -325,6 +420,8 @@
     function setupBatteryPacks() {
         const addBtn = document.getElementById('add-pack-btn');
         const cancelBtn = document.getElementById('cancel-pack-btn');
+        const closeBtn = document.getElementById('close-pack-modal');
+        const modal = document.getElementById('pack-modal');
         const form = document.getElementById('pack-form-element');
 
         addBtn.addEventListener('click', () => {
@@ -333,6 +430,22 @@
 
         cancelBtn.addEventListener('click', () => {
             hidePackForm();
+        });
+
+        closeBtn.addEventListener('click', () => {
+            hidePackForm();
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                hidePackForm();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                hidePackForm();
+            }
         });
 
         form.addEventListener('submit', (e) => {
@@ -377,7 +490,7 @@
     function showPackForm(pack = null) {
         populateCellModelDropdown();
         editingItem = pack;
-        const form = document.getElementById('pack-form');
+        const modal = document.getElementById('pack-modal');
         const title = document.getElementById('pack-form-title');
 
         if (pack) {
@@ -395,13 +508,15 @@
             document.getElementById('pack-id').value = '';
         }
 
-        form.classList.remove('hidden');
-        form.scrollIntoView({ behavior: 'smooth' });
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
 
     function hidePackForm() {
-        document.getElementById('pack-form').classList.add('hidden');
+        const modal = document.getElementById('pack-modal');
+        modal.classList.remove('active');
         document.getElementById('pack-form-element').reset();
+        document.body.style.overflow = '';
         editingItem = null;
     }
 
@@ -470,6 +585,8 @@
     function setupCars() {
         const addBtn = document.getElementById('add-car-btn');
         const cancelBtn = document.getElementById('cancel-car-btn');
+        const closeBtn = document.getElementById('close-car-modal');
+        const modal = document.getElementById('car-modal');
         const form = document.getElementById('car-form-element');
 
         addBtn.addEventListener('click', () => {
@@ -478,6 +595,22 @@
 
         cancelBtn.addEventListener('click', () => {
             hideCarForm();
+        });
+
+        closeBtn.addEventListener('click', () => {
+            hideCarForm();
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                hideCarForm();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                hideCarForm();
+            }
         });
 
         form.addEventListener('submit', (e) => {
@@ -499,15 +632,18 @@
         container.innerHTML = createStatsHTML(stats) + cars.map(car => {
             const validation = validateCar(car);
             const badgeHTML = createValidationBadge(validation);
-            const trimText = car.trim ? ` (${car.trim})` : '';
+            const trimText = car.trim ? ` <span class="car-trim">(${car.trim})</span>` : '';
             const yearStart = car.yearStart || '<span class="missing">?</span>';
             const yearEnd = car.yearEnd || '<span class="missing">Present</span>';
             const yearText = `${yearStart} - ${yearEnd}`;
+            const logoHTML = getCarLogoHTML(car.brand);
 
             return `
-                <div class="data-item ${validation.isComplete ? '' : 'incomplete'}">
+                <div class="data-item car-item ${validation.isComplete ? '' : 'incomplete'}">
+                    ${logoHTML}
                     <div class="data-item-content">
-                        <h3>${car.brand} ${car.model}${trimText} ${badgeHTML}</h3>
+                        <h3 class="car-brand">${car.brand} ${badgeHTML}</h3>
+                        <p class="car-model">${car.model}${trimText}</p>
                         <p><strong>Years:</strong> ${yearText}</p>
                     </div>
                     <div class="data-item-actions">
@@ -521,7 +657,7 @@
 
     function showCarForm(car = null) {
         editingItem = car;
-        const form = document.getElementById('car-form');
+        const modal = document.getElementById('car-modal');
         const title = document.getElementById('car-form-title');
 
         if (car) {
@@ -538,13 +674,15 @@
             document.getElementById('car-id').value = '';
         }
 
-        form.classList.remove('hidden');
-        form.scrollIntoView({ behavior: 'smooth' });
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
 
     function hideCarForm() {
-        document.getElementById('car-form').classList.add('hidden');
+        const modal = document.getElementById('car-modal');
+        modal.classList.remove('active');
         document.getElementById('car-form-element').reset();
+        document.body.style.overflow = '';
         editingItem = null;
     }
 
@@ -597,6 +735,8 @@
     function setupCarBatteryPacks() {
         const addBtn = document.getElementById('add-relation-btn');
         const cancelBtn = document.getElementById('cancel-relation-btn');
+        const closeBtn = document.getElementById('close-relation-modal');
+        const modal = document.getElementById('relation-modal');
         const form = document.getElementById('relation-form-element');
 
         addBtn.addEventListener('click', () => {
@@ -605,6 +745,22 @@
 
         cancelBtn.addEventListener('click', () => {
             hideRelationForm();
+        });
+
+        closeBtn.addEventListener('click', () => {
+            hideRelationForm();
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                hideRelationForm();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                hideRelationForm();
+            }
         });
 
         form.addEventListener('submit', (e) => {
@@ -648,7 +804,7 @@
     function showRelationForm(relation = null) {
         populateRelationDropdowns();
         editingItem = relation;
-        const form = document.getElementById('relation-form');
+        const modal = document.getElementById('relation-modal');
         const title = document.getElementById('relation-form-title');
 
         if (relation) {
@@ -662,13 +818,15 @@
             document.getElementById('relation-id').value = '';
         }
 
-        form.classList.remove('hidden');
-        form.scrollIntoView({ behavior: 'smooth' });
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
 
     function hideRelationForm() {
-        document.getElementById('relation-form').classList.add('hidden');
+        const modal = document.getElementById('relation-modal');
+        modal.classList.remove('active');
         document.getElementById('relation-form-element').reset();
+        document.body.style.overflow = '';
         editingItem = null;
     }
 

@@ -29,10 +29,48 @@
             </div>
 
             <div id="cell-list" class="data-list"></div>
+        </section>
 
-            <!-- Cell Model Form (Hidden by default) -->
-            <div id="cell-form" class="form-container hidden">
+        <!-- Battery Packs Section -->
+        <section id="batteryPacks-section" class="tab-content">
+            <div class="section-header">
+                <h2>Battery Packs</h2>
+                <button class="btn btn-primary" id="add-pack-btn">+ Add Battery Pack</button>
+            </div>
+
+            <div id="pack-list" class="data-list"></div>
+        </section>
+
+        <!-- Cars Section -->
+        <section id="cars-section" class="tab-content">
+            <div class="section-header">
+                <h2>Cars</h2>
+                <button class="btn btn-primary" id="add-car-btn">+ Add Car</button>
+            </div>
+
+            <div id="car-list" class="data-list"></div>
+        </section>
+
+        <!-- Car-Battery Packs Relations Section -->
+        <section id="carBatteryPacks-section" class="tab-content">
+            <div class="section-header">
+                <h2>Car ↔ Battery Pack Relations</h2>
+                <button class="btn btn-primary" id="add-relation-btn">+ Add Relation</button>
+            </div>
+
+            <div id="relation-list" class="data-list"></div>
+        </section>
+    </div>
+
+    <!-- Modal Overlays -->
+    <!-- Cell Model Modal -->
+    <div id="cell-modal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
                 <h3 id="cell-form-title">Add Cell Model</h3>
+                <button class="modal-close" id="close-cell-modal">&times;</button>
+            </div>
+            <div class="modal-body">
                 <form id="cell-form-element">
                     <input type="hidden" id="cell-id">
 
@@ -67,20 +105,17 @@
                     </div>
                 </form>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- Battery Packs Section -->
-        <section id="batteryPacks-section" class="tab-content">
-            <div class="section-header">
-                <h2>Battery Packs</h2>
-                <button class="btn btn-primary" id="add-pack-btn">+ Add Battery Pack</button>
-            </div>
-
-            <div id="pack-list" class="data-list"></div>
-
-            <!-- Battery Pack Form -->
-            <div id="pack-form" class="form-container hidden">
+    <!-- Battery Pack Modal -->
+    <div id="pack-modal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
                 <h3 id="pack-form-title">Add Battery Pack</h3>
+                <button class="modal-close" id="close-pack-modal">&times;</button>
+            </div>
+            <div class="modal-body">
                 <form id="pack-form-element">
                     <input type="hidden" id="pack-id">
 
@@ -122,20 +157,17 @@
                     </div>
                 </form>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- Cars Section -->
-        <section id="cars-section" class="tab-content">
-            <div class="section-header">
-                <h2>Cars</h2>
-                <button class="btn btn-primary" id="add-car-btn">+ Add Car</button>
-            </div>
-
-            <div id="car-list" class="data-list"></div>
-
-            <!-- Car Form -->
-            <div id="car-form" class="form-container hidden">
+    <!-- Car Modal -->
+    <div id="car-modal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
                 <h3 id="car-form-title">Add Car</h3>
+                <button class="modal-close" id="close-car-modal">&times;</button>
+            </div>
+            <div class="modal-body">
                 <form id="car-form-element">
                     <input type="hidden" id="car-id">
 
@@ -170,20 +202,17 @@
                     </div>
                 </form>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <!-- Car-Battery Packs Relations Section -->
-        <section id="carBatteryPacks-section" class="tab-content">
-            <div class="section-header">
-                <h2>Car ↔ Battery Pack Relations</h2>
-                <button class="btn btn-primary" id="add-relation-btn">+ Add Relation</button>
-            </div>
-
-            <div id="relation-list" class="data-list"></div>
-
-            <!-- Relation Form -->
-            <div id="relation-form" class="form-container hidden">
+    <!-- Relation Modal -->
+    <div id="relation-modal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
                 <h3 id="relation-form-title">Add Car-Battery Relation</h3>
+                <button class="modal-close" id="close-relation-modal">&times;</button>
+            </div>
+            <div class="modal-body">
                 <form id="relation-form-element">
                     <input type="hidden" id="relation-id">
 
@@ -207,7 +236,7 @@
                     </div>
                 </form>
             </div>
-        </section>
+        </div>
     </div>
 
     <!-- Load JavaScript files -->
