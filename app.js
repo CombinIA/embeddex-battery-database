@@ -13,7 +13,7 @@
     'use strict';
 
     // State
-    let currentTab = 'cellModels';
+    let currentTab = 'cars';
     let editingItem = null;
 
     /**
@@ -219,7 +219,7 @@
         setupCarBatteryPacks();
 
         // Render initial view
-        renderCellModels();
+        renderCars();
     }
 
     /**
