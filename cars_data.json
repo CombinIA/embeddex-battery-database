@@ -1,0 +1,812 @@
+[
+  {
+    "brand": "BMW",
+    "model": "i3",
+    "trim": null,
+    "yearStart": 2013,
+    "yearEnd": 2016,
+    "totalCapacityKwh": 21.6,
+    "cellManufacturer": "Samsung SDI",
+    "cellModel": "Prismatic 60Ah"
+  },
+  {
+    "brand": "BMW",
+    "model": "i3",
+    "trim": null,
+    "yearStart": 2016,
+    "yearEnd": 2018,
+    "totalCapacityKwh": 33.2,
+    "cellManufacturer": "Samsung SDI",
+    "cellModel": "Prismatic 94Ah"
+  },
+  {
+    "brand": "BMW",
+    "model": "i3s",
+    "trim": null,
+    "yearStart": 2017,
+    "yearEnd": 2018,
+    "totalCapacityKwh": 33.2,
+    "cellManufacturer": "Samsung SDI",
+    "cellModel": "Prismatic 94Ah"
+  },
+  {
+    "brand": "Citröen",
+    "model": "C-zero",
+    "trim": null,
+    "yearStart": 2010,
+    "yearEnd": 2013,
+    "totalCapacityKwh": 16.0,
+    "cellManufacturer": "GS Yuasa",
+    "cellModel": "LEV50"
+  },
+  {
+    "brand": "Citröen",
+    "model": "C-zero",
+    "trim": null,
+    "yearStart": 2013,
+    "yearEnd": 2016,
+    "totalCapacityKwh": 16.0,
+    "cellManufacturer": "GS Yuasa",
+    "cellModel": "LEV50N"
+  },
+  {
+    "brand": "Citröen",
+    "model": "C-zero",
+    "trim": null,
+    "yearStart": 2016,
+    "yearEnd": 2020,
+    "totalCapacityKwh": 16.0,
+    "cellManufacturer": "GS Yuasa",
+    "cellModel": "LEV50N"
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Kona",
+    "trim": null,
+    "yearStart": 2017,
+    "yearEnd": 2023,
+    "totalCapacityKwh": 64.0,
+    "cellManufacturer": "Shenzhen Starax Energy Technology",
+    "cellModel": "S28(B28)"
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Kona",
+    "trim": null,
+    "yearStart": 2017,
+    "yearEnd": 2023,
+    "totalCapacityKwh": 39.2,
+    "cellManufacturer": "Shenzhen Starax Energy Technology",
+    "cellModel": "S28(B28)"
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "i-MiEV",
+    "trim": null,
+    "yearStart": 2010,
+    "yearEnd": 2013,
+    "totalCapacityKwh": 16.0,
+    "cellManufacturer": "GS Yuasa",
+    "cellModel": "LEV50"
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "i-MiEV",
+    "trim": null,
+    "yearStart": 2013,
+    "yearEnd": 2016,
+    "totalCapacityKwh": 16.0,
+    "cellManufacturer": "GS Yuasa",
+    "cellModel": "LEV50N"
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "i-MiEV",
+    "trim": null,
+    "yearStart": 2016,
+    "yearEnd": 2020,
+    "totalCapacityKwh": 16.0,
+    "cellManufacturer": "GS Yuasa",
+    "cellModel": "LEV50N"
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Outlander PHEV",
+    "trim": null,
+    "yearStart": 2013,
+    "yearEnd": 2018,
+    "totalCapacityKwh": 12.0,
+    "cellManufacturer": "GS Yuasa",
+    "cellModel": "LEV40"
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Outlander PHEV",
+    "trim": null,
+    "yearStart": 2018,
+    "yearEnd": 2021,
+    "totalCapacityKwh": 13.8,
+    "cellManufacturer": "GS Yuasa",
+    "cellModel": "LEV40N"
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Outlander PHEV",
+    "trim": null,
+    "yearStart": 2021,
+    "yearEnd": 2024,
+    "totalCapacityKwh": 20.0,
+    "cellManufacturer": "GS Yuasa",
+    "cellModel": "LEV40N"
+  },
+  {
+    "brand": "Nissan",
+    "model": "Leaf",
+    "trim": null,
+    "yearStart": 2010,
+    "yearEnd": 2016,
+    "totalCapacityKwh": 24.0,
+    "cellManufacturer": "AESC",
+    "cellModel": "32,5Ah Pouch"
+  },
+  {
+    "brand": "Nissan",
+    "model": "Leaf",
+    "trim": null,
+    "yearStart": 2016,
+    "yearEnd": 2017,
+    "totalCapacityKwh": 30.0,
+    "cellManufacturer": "AESC",
+    "cellModel": "43Ah Pouch"
+  },
+  {
+    "brand": "Peugeot",
+    "model": "iOn",
+    "trim": null,
+    "yearStart": 2010,
+    "yearEnd": 2013,
+    "totalCapacityKwh": 16.0,
+    "cellManufacturer": "GS Yuasa",
+    "cellModel": "LEV50"
+  },
+  {
+    "brand": "Peugeot",
+    "model": "iOn",
+    "trim": null,
+    "yearStart": 2013,
+    "yearEnd": 2016,
+    "totalCapacityKwh": 16.0,
+    "cellManufacturer": "GS Yuasa",
+    "cellModel": "LEV50N"
+  },
+  {
+    "brand": "Peugeot",
+    "model": "iOn",
+    "trim": null,
+    "yearStart": 2016,
+    "yearEnd": 2020,
+    "totalCapacityKwh": 16.0,
+    "cellManufacturer": "GS Yuasa",
+    "cellModel": "LEV50N"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model 3",
+    "trim": "Long Range Performance",
+    "yearStart": 2019,
+    "yearEnd": 2020,
+    "totalCapacityKwh": 78.8,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR2170A"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model 3",
+    "trim": "Long Range Performance",
+    "yearStart": 2020,
+    "yearEnd": 2022,
+    "totalCapacityKwh": 82.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR2170A"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model 3",
+    "trim": "Long Range Dual Motor",
+    "yearStart": 2019,
+    "yearEnd": 2020,
+    "totalCapacityKwh": 78.8,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR2170A"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model 3",
+    "trim": "Long Range Dual Motor",
+    "yearStart": 2020,
+    "yearEnd": 2022,
+    "totalCapacityKwh": 75.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR2170A"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model 3",
+    "trim": "Long Range Dual Motor",
+    "yearStart": 2021,
+    "yearEnd": 2023,
+    "totalCapacityKwh": 78.1,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR2170A"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model 3",
+    "trim": "Long Range Dual Motor",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "totalCapacityKwh": 78.1,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR2170A"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model 3",
+    "trim": "Standard Range Plus",
+    "yearStart": 2019,
+    "yearEnd": 2020,
+    "totalCapacityKwh": 53.1,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR2170A"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model 3",
+    "trim": "Standard Range Plus",
+    "yearStart": 2020,
+    "yearEnd": 2021,
+    "totalCapacityKwh": 55.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR2170A"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model 3",
+    "trim": "model3",
+    "yearStart": 2021,
+    "yearEnd": 2023,
+    "totalCapacityKwh": 60.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR2170A"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model 3",
+    "trim": "model3",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "totalCapacityKwh": 60.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR2170A"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model 3",
+    "trim": "Long Range RWD",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "totalCapacityKwh": 78.1,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model 3",
+    "trim": "Performance",
+    "yearStart": 2022,
+    "yearEnd": 2023,
+    "totalCapacityKwh": 78.1,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model 3",
+    "trim": "Performance",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "totalCapacityKwh": 78.1,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "60",
+    "yearStart": 2016,
+    "yearEnd": 2017,
+    "totalCapacityKwh": 75.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "60D",
+    "yearStart": 2016,
+    "yearEnd": 2017,
+    "totalCapacityKwh": 75.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "70",
+    "yearStart": 2015,
+    "yearEnd": 2016,
+    "totalCapacityKwh": 75.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "70",
+    "yearStart": 2016,
+    "yearEnd": null,
+    "totalCapacityKwh": 75.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "70D",
+    "yearStart": 2015,
+    "yearEnd": 2016,
+    "totalCapacityKwh": 70.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "70D",
+    "yearStart": 2016,
+    "yearEnd": null,
+    "totalCapacityKwh": 75.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "75",
+    "yearStart": 2016,
+    "yearEnd": 2017,
+    "totalCapacityKwh": 75.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "75D",
+    "yearStart": 2016,
+    "yearEnd": 2019,
+    "totalCapacityKwh": 75.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "85",
+    "yearStart": 2013,
+    "yearEnd": 2016,
+    "totalCapacityKwh": 85.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "85D",
+    "yearStart": 2015,
+    "yearEnd": 2016,
+    "totalCapacityKwh": 85.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "P85",
+    "yearStart": 2012,
+    "yearEnd": 2014,
+    "totalCapacityKwh": 85.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "P85D",
+    "yearStart": 2014,
+    "yearEnd": 2016,
+    "totalCapacityKwh": 85.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "P90DL",
+    "yearStart": 2015,
+    "yearEnd": 2016,
+    "totalCapacityKwh": 90.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "P90DL",
+    "yearStart": 2016,
+    "yearEnd": null,
+    "totalCapacityKwh": 90.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "90D",
+    "yearStart": 2015,
+    "yearEnd": 2016,
+    "totalCapacityKwh": 90.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "90D",
+    "yearStart": 2016,
+    "yearEnd": 2017,
+    "totalCapacityKwh": 90.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "P90D",
+    "yearStart": 2015,
+    "yearEnd": 2016,
+    "totalCapacityKwh": 90.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650GA"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "P90D",
+    "yearStart": 2016,
+    "yearEnd": 2019,
+    "totalCapacityKwh": 90.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650GA"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "P100D",
+    "yearStart": 2016,
+    "yearEnd": 2019,
+    "totalCapacityKwh": 100.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650GA"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "Standard Range",
+    "yearStart": 2019,
+    "yearEnd": 2020,
+    "totalCapacityKwh": 75.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650GA"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "Performance Raven",
+    "yearStart": 2019,
+    "yearEnd": 2020,
+    "totalCapacityKwh": 100.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650GA"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "Performance",
+    "yearStart": 2020,
+    "yearEnd": 2021,
+    "totalCapacityKwh": 103.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650GA"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "Long Range",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "totalCapacityKwh": 100.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650GA"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "Long Range Raven",
+    "yearStart": 2019,
+    "yearEnd": 2020,
+    "totalCapacityKwh": 100.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "Long Range Plus",
+    "yearStart": 2020,
+    "yearEnd": 2021,
+    "totalCapacityKwh": 103.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model S",
+    "trim": "Plaid",
+    "yearStart": 2022,
+    "yearEnd": null,
+    "totalCapacityKwh": 100.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model X",
+    "trim": "60D",
+    "yearStart": 2016,
+    "yearEnd": 2017,
+    "totalCapacityKwh": 75.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model X",
+    "trim": "75D",
+    "yearStart": 2016,
+    "yearEnd": 2018,
+    "totalCapacityKwh": 75.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model X",
+    "trim": "P90DL",
+    "yearStart": 2016,
+    "yearEnd": null,
+    "totalCapacityKwh": 90.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650B"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model X",
+    "trim": "P90D",
+    "yearStart": 2016,
+    "yearEnd": null,
+    "totalCapacityKwh": 90.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650GA"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model X",
+    "trim": "90D",
+    "yearStart": 2016,
+    "yearEnd": 2017,
+    "totalCapacityKwh": 90.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650GA"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model X",
+    "trim": "P100D",
+    "yearStart": 2017,
+    "yearEnd": 2019,
+    "totalCapacityKwh": 100.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650GA"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model X",
+    "trim": "100D",
+    "yearStart": 2017,
+    "yearEnd": 2019,
+    "totalCapacityKwh": 100.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650GA"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model X",
+    "trim": "Performance Raven",
+    "yearStart": 2019,
+    "yearEnd": 2020,
+    "totalCapacityKwh": 100.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650GA"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model X",
+    "trim": "Performance",
+    "yearStart": 2020,
+    "yearEnd": 2021,
+    "totalCapacityKwh": 103.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650GA"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model X",
+    "trim": "Long Range",
+    "yearStart": 2023,
+    "yearEnd": null,
+    "totalCapacityKwh": 100.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR18650GA"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model X",
+    "trim": "Long Range Plus",
+    "yearStart": 2020,
+    "yearEnd": 2021,
+    "totalCapacityKwh": 103.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR2170A"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model X",
+    "trim": "Long Range Raven",
+    "yearStart": 2019,
+    "yearEnd": 2020,
+    "totalCapacityKwh": 100.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR2170A"
+  },
+  {
+    "brand": "Tesla",
+    "model": "Model X",
+    "trim": "Plaid",
+    "yearStart": 2022,
+    "yearEnd": null,
+    "totalCapacityKwh": 100.0,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "NCR2170A"
+  },
+  {
+    "brand": "Toyota",
+    "model": "Prius",
+    "trim": null,
+    "yearStart": 2000,
+    "yearEnd": 2003,
+    "totalCapacityKwh": 1.78,
+    "cellManufacturer": "Toyota",
+    "cellModel": ""
+  },
+  {
+    "brand": "Toyota",
+    "model": "Prius",
+    "trim": null,
+    "yearStart": 2003,
+    "yearEnd": 2009,
+    "totalCapacityKwh": 1.3,
+    "cellManufacturer": "Toyota",
+    "cellModel": "NP2.0"
+  },
+  {
+    "brand": "Toyota",
+    "model": "Prius",
+    "trim": null,
+    "yearStart": 2009,
+    "yearEnd": 2015,
+    "totalCapacityKwh": 1.3,
+    "cellManufacturer": "Toyota",
+    "cellModel": "NP2.0"
+  },
+  {
+    "brand": "Toyota",
+    "model": "Prius",
+    "trim": null,
+    "yearStart": 2015,
+    "yearEnd": 2022,
+    "totalCapacityKwh": 1.3,
+    "cellManufacturer": "Toyota",
+    "cellModel": "NP2.0"
+  },
+  {
+    "brand": "Toyota",
+    "model": "Prius +",
+    "trim": null,
+    "yearStart": 2012,
+    "yearEnd": 2021,
+    "totalCapacityKwh": 1.3,
+    "cellManufacturer": "Toyota",
+    "cellModel": "NP2.0"
+  },
+  {
+    "brand": "Toyota",
+    "model": "Prius C",
+    "trim": null,
+    "yearStart": 2012,
+    "yearEnd": 2016,
+    "totalCapacityKwh": 0.94,
+    "cellManufacturer": "Toyota",
+    "cellModel": "NP2.0"
+  },
+  {
+    "brand": "Toyota",
+    "model": "Prius PHEV",
+    "trim": null,
+    "yearStart": 2012,
+    "yearEnd": 2016,
+    "totalCapacityKwh": 5.2,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "Prismatic PHEV2 - 22Ah"
+  },
+  {
+    "brand": "Toyota",
+    "model": "Prius PHEV",
+    "trim": null,
+    "yearStart": 2016,
+    "yearEnd": 2022,
+    "totalCapacityKwh": 8.8,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "Prismatic PHEV2 - 22Ah"
+  },
+  {
+    "brand": "Toyota",
+    "model": "Prius PHEV",
+    "trim": null,
+    "yearStart": 2023,
+    "yearEnd": null,
+    "totalCapacityKwh": 13.6,
+    "cellManufacturer": "Panasonic",
+    "cellModel": "Prismatic PHEV2 - 22Ah"
+  },
+  {
+    "brand": "Toyota",
+    "model": "Yaris",
+    "trim": null,
+    "yearStart": 2012,
+    "yearEnd": 2020,
+    "totalCapacityKwh": 0.9,
+    "cellManufacturer": "Toyota",
+    "cellModel": "NP2.0"
+  }
+]

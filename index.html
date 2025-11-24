@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battery Database Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ EV Battery Database</h1>
+            <p class="subtitle">Local storage-based database for electric vehicle batteries</p>
+        </header>
+
+        <!-- Tab Navigation -->
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="cellModels">Cell Models</button>
+            <button class="tab-btn" data-tab="batteryPacks">Battery Packs</button>
+            <button class="tab-btn" data-tab="cars">Cars</button>
+            <button class="tab-btn" data-tab="carBatteryPacks">Car-Battery Relations</button>
+        </nav>
+
+        <!-- Cell Models Section -->
+        <section id="cellModels-section" class="tab-content active">
+            <div class="section-header">
+                <h2>Cell Models</h2>
+                <button class="btn btn-primary" id="add-cell-btn">+ Add Cell Model</button>
+            </div>
+
+            <div id="cell-list" class="data-list"></div>
+
+            <!-- Cell Model Form (Hidden by default) -->
+            <div id="cell-form" class="form-container hidden">
+                <h3 id="cell-form-title">Add Cell Model</h3>
+                <form id="cell-form-element">
+                    <input type="hidden" id="cell-id">
+
+                    <div class="form-group">
+                        <label for="cell-manufacturer">Manufacturer *</label>
+                        <input type="text" id="cell-manufacturer" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cell-model">Model *</label>
+                        <input type="text" id="cell-model" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cell-chemistry">Chemistry</label>
+                        <input type="text" id="cell-chemistry" placeholder="Li-ION, Ni-MH, etc.">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cell-voltage">Nominal Voltage (V)</label>
+                        <input type="number" id="cell-voltage" step="0.01">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cell-capacity">Nominal Capacity (mAh)</label>
+                        <input type="number" id="cell-capacity">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" id="cancel-cell-btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Battery Packs Section -->
+        <section id="batteryPacks-section" class="tab-content">
+            <div class="section-header">
+                <h2>Battery Packs</h2>
+                <button class="btn btn-primary" id="add-pack-btn">+ Add Battery Pack</button>
+            </div>
+
+            <div id="pack-list" class="data-list"></div>
+
+            <!-- Battery Pack Form -->
+            <div id="pack-form" class="form-container hidden">
+                <h3 id="pack-form-title">Add Battery Pack</h3>
+                <form id="pack-form-element">
+                    <input type="hidden" id="pack-id">
+
+                    <div class="form-group">
+                        <label for="pack-name">Name *</label>
+                        <input type="text" id="pack-name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pack-capacity">Total Capacity (kWh) *</label>
+                        <input type="number" id="pack-capacity" step="0.1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pack-series">Series Count</label>
+                        <input type="number" id="pack-series">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pack-parallel">Parallel Count</label>
+                        <input type="number" id="pack-parallel">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pack-cells">Cell Count</label>
+                        <input type="number" id="pack-cells">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pack-cell-model">Cell Model *</label>
+                        <select id="pack-cell-model" required>
+                            <option value="">Select cell model...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" id="cancel-pack-btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Cars Section -->
+        <section id="cars-section" class="tab-content">
+            <div class="section-header">
+                <h2>Cars</h2>
+                <button class="btn btn-primary" id="add-car-btn">+ Add Car</button>
+            </div>
+
+            <div id="car-list" class="data-list"></div>
+
+            <!-- Car Form -->
+            <div id="car-form" class="form-container hidden">
+                <h3 id="car-form-title">Add Car</h3>
+                <form id="car-form-element">
+                    <input type="hidden" id="car-id">
+
+                    <div class="form-group">
+                        <label for="car-brand">Brand *</label>
+                        <input type="text" id="car-brand" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="car-model">Model *</label>
+                        <input type="text" id="car-model" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="car-trim">Trim</label>
+                        <input type="text" id="car-trim">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="car-year-start">Year Start</label>
+                        <input type="number" id="car-year-start" min="1900" max="2100">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="car-year-end">Year End</label>
+                        <input type="number" id="car-year-end" min="1900" max="2100">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" id="cancel-car-btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Car-Battery Packs Relations Section -->
+        <section id="carBatteryPacks-section" class="tab-content">
+            <div class="section-header">
+                <h2>Car ↔ Battery Pack Relations</h2>
+                <button class="btn btn-primary" id="add-relation-btn">+ Add Relation</button>
+            </div>
+
+            <div id="relation-list" class="data-list"></div>
+
+            <!-- Relation Form -->
+            <div id="relation-form" class="form-container hidden">
+                <h3 id="relation-form-title">Add Car-Battery Relation</h3>
+                <form id="relation-form-element">
+                    <input type="hidden" id="relation-id">
+
+                    <div class="form-group">
+                        <label for="relation-car">Car *</label>
+                        <select id="relation-car" required>
+                            <option value="">Select car...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="relation-pack">Battery Pack *</label>
+                        <select id="relation-pack" required>
+                            <option value="">Select battery pack...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" id="cancel-relation-btn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Load JavaScript files -->
+    <script src="db.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

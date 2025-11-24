@@ -1,0 +1,142 @@
+[
+  {
+    "manufacturer": "Shenzhen Starax Energy Technology",
+    "model": "S28(B28)",
+    "chemistry": "Li-ION",
+    "nominalVoltage": 3.63,
+    "nominalCapacityMah": 55000
+  },
+  {
+    "manufacturer": "LG",
+    "model": "E63",
+    "chemistry": "Li-iON",
+    "nominalVoltage": 3.6,
+    "nominalCapacityMah": 64800
+  },
+  {
+    "manufacturer": "Panasonic",
+    "model": "NCR18650B",
+    "chemistry": "Li-ION",
+    "nominalVoltage": 3.6,
+    "nominalCapacityMah": 3350
+  },
+  {
+    "manufacturer": "LG",
+    "model": "INR21700-M50",
+    "chemistry": "Li-ION",
+    "nominalVoltage": 3.63,
+    "nominalCapacityMah": null
+  },
+  {
+    "manufacturer": "Panasonic",
+    "model": "NCR21700",
+    "chemistry": "Li-ION",
+    "nominalVoltage": 3.6,
+    "nominalCapacityMah": 5000
+  },
+  {
+    "manufacturer": "Panasonic",
+    "model": "Prismatic PHEV2 - 22Ah",
+    "chemistry": "Li-ION",
+    "nominalVoltage": 3.6,
+    "nominalCapacityMah": 22000
+  },
+  {
+    "manufacturer": "Panasonic",
+    "model": "Prismatic PHEV2 - 25Ah",
+    "chemistry": "Li-ION",
+    "nominalVoltage": 3.6,
+    "nominalCapacityMah": 25000
+  },
+  {
+    "manufacturer": "Panasonic",
+    "model": "Prismatic PHEV2 - 51Ah",
+    "chemistry": "Li-ION",
+    "nominalVoltage": 3.7,
+    "nominalCapacityMah": 51000
+  },
+  {
+    "manufacturer": "Ennocar",
+    "model": "EC-H-Series-INS-G2-100.8",
+    "chemistry": "Ni-MH",
+    "nominalVoltage": 14.4,
+    "nominalCapacityMah": 6500
+  },
+  {
+    "manufacturer": "Ennocar",
+    "model": "EC-T-SERIES-SP-AQUA-7.2V",
+    "chemistry": "Ni-MH",
+    "nominalVoltage": 7.2,
+    "nominalCapacityMah": 6500
+  },
+  {
+    "manufacturer": "AESC",
+    "model": "32,5Ah Pouch",
+    "chemistry": "Li-ION",
+    "nominalVoltage": 3.8,
+    "nominalCapacityMah": 65000
+  },
+  {
+    "manufacturer": "AESC",
+    "model": "43Ah Pouch",
+    "chemistry": "Li-ION",
+    "nominalVoltage": 3.7,
+    "nominalCapacityMah": 86000
+  },
+  {
+    "manufacturer": "GS Yuasa",
+    "model": "LEV40",
+    "chemistry": "Li-ION",
+    "nominalVoltage": 3.75,
+    "nominalCapacityMah": 40000
+  },
+  {
+    "manufacturer": "GS Yuasa",
+    "model": "LEV40N",
+    "chemistry": "Li-ION",
+    "nominalVoltage": 3.75,
+    "nominalCapacityMah": 40000
+  },
+  {
+    "manufacturer": "GS Yuasa",
+    "model": "LEV50",
+    "chemistry": "Li-ION",
+    "nominalVoltage": 3.75,
+    "nominalCapacityMah": 50000
+  },
+  {
+    "manufacturer": "GS Yuasa",
+    "model": "LEV50N",
+    "chemistry": "Li-ION",
+    "nominalVoltage": 3.75,
+    "nominalCapacityMah": 40000
+  },
+  {
+    "manufacturer": "Samsung",
+    "model": "SDI 60Ah",
+    "chemistry": "Li-ION",
+    "nominalVoltage": 3.68,
+    "nominalCapacityMah": null
+  },
+  {
+    "manufacturer": "Samsung",
+    "model": "SDI 94Ah",
+    "chemistry": "Li-ION",
+    "nominalVoltage": 3.68,
+    "nominalCapacityMah": null
+  },
+  {
+    "manufacturer": "Samsung",
+    "model": "SDI 120Ah",
+    "chemistry": "Li-ION",
+    "nominalVoltage": 3.68,
+    "nominalCapacityMah": null
+  },
+  {
+    "manufacturer": "Toyota",
+    "model": "NP2.0",
+    "chemistry": "Ni-MH",
+    "nominalVoltage": 7.2,
+    "nominalCapacityMah": 6500
+  }
+]
