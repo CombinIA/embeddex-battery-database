@@ -209,6 +209,16 @@
     }
 
     /**
+     * Update tab counters
+     */
+    function updateTabCounters() {
+        document.getElementById('cars-counter').textContent = DB.cars.list().length;
+        document.getElementById('batteryPacks-counter').textContent = DB.batteryPacks.list().length;
+        document.getElementById('cellModels-counter').textContent = DB.cellModels.list().length;
+        document.getElementById('carBatteryPacks-counter').textContent = DB.carBatteryPacks.list().length;
+    }
+
+    /**
      * Initialize the application
      */
     function init() {
@@ -218,7 +228,8 @@
         setupCars();
         setupCarBatteryPacks();
 
-        // Render initial view
+        // Update counters and render initial view
+        updateTabCounters();
         renderCars();
     }
 
@@ -388,6 +399,7 @@
                 DB.cellModels.create(data);
             }
             hideCellForm();
+            updateTabCounters();
             renderCellModels();
             // Update battery pack dropdown if on that tab
             if (currentTab === 'batteryPacks') {
@@ -407,6 +419,7 @@
         if (confirm('Are you sure you want to delete this cell model?')) {
             try {
                 DB.cellModels.remove(id);
+                updateTabCounters();
                 renderCellModels();
             } catch (error) {
                 alert('Error: ' + error.message);
@@ -553,6 +566,7 @@
                 DB.batteryPacks.create(data);
             }
             hidePackForm();
+            updateTabCounters();
             renderBatteryPacks();
             // Update relations dropdown if on that tab
             if (currentTab === 'carBatteryPacks') {
@@ -572,6 +586,7 @@
         if (confirm('Are you sure you want to delete this battery pack?')) {
             try {
                 DB.batteryPacks.remove(id);
+                updateTabCounters();
                 renderBatteryPacks();
             } catch (error) {
                 alert('Error: ' + error.message);
@@ -703,6 +718,7 @@
                 DB.cars.create(data);
             }
             hideCarForm();
+            updateTabCounters();
             renderCars();
             // Update relations dropdown if on that tab
             if (currentTab === 'carBatteryPacks') {
@@ -722,6 +738,7 @@
         if (confirm('Are you sure you want to delete this car?')) {
             try {
                 DB.cars.remove(id);
+                updateTabCounters();
                 renderCars();
             } catch (error) {
                 alert('Error: ' + error.message);
@@ -875,6 +892,7 @@
                 DB.carBatteryPacks.create(data);
             }
             hideRelationForm();
+            updateTabCounters();
             renderCarBatteryPacks();
         } catch (error) {
             alert('Error: ' + error.message);
@@ -890,6 +908,7 @@
         if (confirm('Are you sure you want to delete this relation?')) {
             try {
                 DB.carBatteryPacks.remove(id);
+                updateTabCounters();
                 renderCarBatteryPacks();
             } catch (error) {
                 alert('Error: ' + error.message);

@@ -74,6 +74,23 @@ header h1 {
     border-bottom-color: #3498db;
 }
 
+.tab-counter {
+    display: inline-block;
+    background: #95a5a6;
+    color: white;
+    font-size: 0.75em;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 6px;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+.tab-btn.active .tab-counter {
+    background: #3498db;
+}
+
 /* Tab Content */
 .tab-content {
     display: none;
